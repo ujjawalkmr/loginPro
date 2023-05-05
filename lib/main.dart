@@ -92,61 +92,65 @@ class _FrantendLoginState extends State<FrantendLogin> {
                         ),
 
                         //Form Validation  Email Address
-                        Container(
-                          constraints: BoxConstraints.expand(width: 250.0,height: 56.0),
-                          margin: EdgeInsets.only(left: 50.0,top: 100.0),
-                          child: Card(
-                            elevation: 10,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(50.0)
-                            ),
-                            child: Form(
-                                 child: Column(
-                                   children: [Padding(
-                                     padding: EdgeInsets.only(left: 10),
-                                     child: TextFormField(
 
-                                     keyboardType: TextInputType.emailAddress,
-                                       decoration: InputDecoration(
-                                         hintText: 'Enter Email',
-                                         prefixIcon: Icon(Icons.email,
-                                         color: Colors.orange,
-                                         ),
-                                         border: InputBorder.none
-                                       ),
-                                       onChanged: (String value){
-
-                                       },
-                                       validator: (value){
-                                       return value!.isEmpty?"Please enter email":null;
-                                       },
-                                     ),
-                                   ),
-                                     SizedBox(
-                                       height: 40,
-                                     ),
-                                     Padding(
+                        Form(
+                          child: Container(
+                            constraints: BoxConstraints.expand(width: 250.0,height: 56.0),
+                            margin: EdgeInsets.only(left: 50.0,top: 100.0),
+                            child: Card(
+                              elevation: 10,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50.0)
+                              ),
+                              child: Form(
+                                   child: Column(
+                                     children: [
+                                       Padding(
                                        padding: EdgeInsets.only(left: 10),
                                        child: TextFormField(
 
-                                         keyboardType: TextInputType.emailAddress,
+                                       keyboardType: TextInputType.emailAddress,
                                          decoration: InputDecoration(
-                                             hintText: 'Enter Email',
-                                             prefixIcon: Icon(Icons.email,
-                                               color: Colors.orange,
-                                             ),
-                                             border: InputBorder.none
+                                           hintText: 'Enter Email',
+                                           prefixIcon: Icon(Icons.email,
+                                           color: Colors.orange,
+                                           ),
+                                           border: InputBorder.none
                                          ),
                                          onChanged: (String value){
 
                                          },
                                          validator: (value){
-                                           return value!.isEmpty?"Please enter email":null;
+                                         return value!.isEmpty?"Please enter email":null;
                                          },
                                        ),
                                      ),
-                                 ]),
-                              ),
+                                       // SizedBox(
+                                       //   height: 40,
+                                       // ),
+                                       // Padding(
+                                       //   padding: EdgeInsets.only(left: 10),
+                                       //   child: TextFormField(
+                                       //
+                                       //     keyboardType: TextInputType.emailAddress,
+                                       //     decoration: InputDecoration(
+                                       //         hintText: 'Enter Email',
+                                       //         prefixIcon: Icon(Icons.email,
+                                       //           color: Colors.orange,
+                                       //         ),
+                                       //         border: InputBorder.none
+                                       //     ),
+                                       //     onChanged: (String value){
+                                       //
+                                       //     },
+                                       //     validator: (value){
+                                       //       return value!.isEmpty?"Please enter email":null;
+                                       //     },
+                                       //   ),
+                                       // ),
+                                   ]),
+                                ),
+                            ),
                           ),
                           ),
                       ],
